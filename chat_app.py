@@ -44,7 +44,7 @@ Pasaporte de {nombre_display}:
     return context, nombres
 
 # Inicializar el modelo
-llm = ChatOpenAI(model="gpt-4o")
+llm = ChatOpenAI(model="gpt-4-turbo")
 
 # Streamlit UI
 st.title("IA Onboarding - Multi-Pasaportes")

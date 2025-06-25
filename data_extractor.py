@@ -2,7 +2,7 @@ from langchain_openai import ChatOpenAI
 
 
 def extract_passport_fields(text):
-    llm = ChatOpenAI(model="gpt-4o")
+   llm = ChatOpenAI(model="gpt-4-turbo")
     prompt = f"""
     Extrae del siguiente texto los campos:
     - numero_pasaporte
