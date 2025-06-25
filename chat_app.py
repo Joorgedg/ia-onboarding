@@ -44,7 +44,18 @@ Pasaporte de {nombre_display}:
     return context, nombres
 
 # Inicializar el modelo
-llm = ChatOpenAI(model="gpt-4-turbo")
+import os
+from langchain_openai import ChatOpenAI
+
+# Leer la clave de la variable de entorno (que Streamlit mete desde los secrets)
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
+# Inicializar el modelo
+llm = ChatOpenAI(
+    model="gpt-4o",
+    openai_api_key=openai_api_key
+)
+
 
 # Streamlit UI
 st.title("IA Onboarding - Multi-Pasaportes")
