@@ -1,0 +1,6 @@
+# Evitar subir datos privados
+.env
+docs/*
+data/*
+venv/
+__pycache__/
